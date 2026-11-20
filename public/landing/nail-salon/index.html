@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nail-salon" style="--tp-h: 345">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NAIL BAR — Fresh set, fresh mood.</title>
+    <meta name="description"
+        content="Chrome, jelly and french nail sets in Banani, Dhaka. Booked in two taps, dry in forty minutes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ff2f8e'/%3E%3Crect x='11' y='6' width='10' height='20' rx='5' fill='%23fff2f6'/%3E%3C/svg%3E">
+</head>
+
+<body>
+
+    <div class="tp-web-stage">
+        <div class="tp-fx" aria-hidden="true"></div>
+
+        <!-- ============ nav ============ -->
+        <header class="nav">
+            <div class="shell">
+                <div class="nav__capsule">
+                    <a class="nav__brand" href="index.html" aria-label="Nail Bar home">
+                        <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect x="4" y="3" width="10" height="26" rx="5" fill="var(--tp-acc)"
+                                transform="rotate(-9 9 16)" />
+                            <rect x="18" y="3" width="10" height="26" rx="5" fill="var(--tp-acc-2)"
+                                transform="rotate(9 23 16)" />
+                        </svg>
+                        <span>NAIL&nbsp;BAR</span>
+                    </a>
+                    <nav class="nav__links" aria-label="Main">
+                        <a href="#menu">Menu</a>
+                        <a href="#artists">Artists</a>
+                        <a href="#sets">Sets</a>
+                        <a href="#studio">Studio</a>
+                    </nav>
+                    <a class="btn btn--primary btn--sm nav__cta" href="book.html">Book a set</a>
+                    <button class="nav__burger" type="button" id="menuOpen" aria-label="Open menu"
+                        aria-controls="sheetMenu" aria-expanded="false">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 7h16M4 12h16M4 17h10" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- mobile sheet -->
+        <div class="menu" id="sheetMenu" hidden>
+            <div class="menu__sheet">
+                <div class="menu__top">
+                    <span class="mono">Menu</span>
+                    <button type="button" id="menuClose" aria-label="Close menu"
+                        style="width:var(--tp-tap);height:var(--tp-tap);display:grid;place-items:center;border-radius:var(--tp-r-btn);background:var(--tp-surf-2)">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 6l12 12M18 6L6 18" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="menu__list">
+                    <li><a href="#menu">Menu <span class="mono muted">01</span></a></li>
+                    <li><a href="#artists">Artists <span class="mono muted">02</span></a></li>
+                    <li><a href="#sets">Sets <span class="mono muted">03</span></a></li>
+                    <li><a href="#studio">Studio <span class="mono muted">04</span></a></li>
+                </ul>
+                <a class="btn btn--primary btn--block" href="book.html">Book a set</a>
+            </div>
+        </div>
+
+        <!-- ============ hero ============ -->
+        <section class="hero">
+            <div class="shell">
+                <div class="hero__grid">
+                    <div class="hero__art">
+                        <div class="photo">
+                            <div class="nailart">
+                                <svg viewBox="0 0 480 480" role="img" aria-label="Chrome french manicure illustration">
+                                    <defs>
+                                        <linearGradient id="jelly" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0" stop-color="var(--tp-acc-2)" />
+                                            <stop offset=".42" stop-color="var(--tp-acc)" />
+                                            <stop offset="1" stop-color="var(--tp-acc)" />
+                                        </linearGradient>
+                                        <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0" stop-color="var(--tp-acc-ink)" stop-opacity=".96" />
+                                            <stop offset=".46" stop-color="var(--tp-acc-2)" />
+                                            <stop offset=".72" stop-color="var(--tp-acc-ink)" stop-opacity=".85" />
+                                            <stop offset="1" stop-color="var(--tp-acc-2)" />
+                                        </linearGradient>
+                                        <clipPath id="nailA">
+                                            <rect x="-38" y="0" width="76" height="216" rx="38" />
+                                        </clipPath>
+                                    </defs>
+                                    <ellipse cx="240" cy="404" rx="196" ry="52" fill="var(--tp-surf)" opacity=".55" />
+                                    <g transform="translate(148 150) rotate(-22)">
+                                        <g clip-path="url(#nailA)">
+                                            <rect x="-44" y="0" width="88" height="214" rx="44" fill="url(#jelly)" />
+                                            <rect x="-44" y="0" width="88" height="52" fill="url(#chrome)" />
+                                        </g>
+                                        <ellipse cx="-18" cy="112" rx="8" ry="30" fill="var(--tp-acc-ink)"
+                                            opacity=".38" />
+                                    </g>
+                                    <g transform="translate(332 150) rotate(22)">
+                                        <g clip-path="url(#nailA)">
+                                            <rect x="-44" y="0" width="88" height="214" rx="44" fill="url(#jelly)" />
+                                            <rect x="-44" y="0" width="88" height="52" fill="url(#chrome)" />
+                                        </g>
+                                        <ellipse cx="-18" cy="112" rx="8" ry="30" fill="var(--tp-acc-ink)"
+                                            opacity=".38" />
+                                    </g>
+                                    <g transform="translate(240 96)">
+                                        <g clip-path="url(#nailB)">
+                                            <rect x="-34" y="0" width="68" height="164" rx="34" fill="url(#jelly)" />
+                                            <rect x="-34" y="0" width="68" height="40" fill="url(#chrome)" />
+                                        </g>
+                                        <ellipse cx="-13" cy="88" rx="6" ry="24" fill="var(--tp-acc-ink)"
+                                            opacity=".4" />
+                                        <circle cx="16" cy="26" r="3.4" fill="var(--tp-acc-ink)" opacity=".7" />
+                                    </g>
+                                    <g transform="translate(240 250)">
+                                        <g clip-path="url(#nailB)">
+                                            <rect x="-34" y="0" width="68" height="164" rx="34" fill="url(#jelly)" />
+                                            <rect x="-34" y="0" width="68" height="40" fill="url(#chrome)" />
+                                        </g>
+                                        <ellipse cx="-13" cy="88" rx="6" ry="24" fill="var(--tp-acc-ink)"
+                                            opacity=".4" />
+                                    </g>
+                                    <circle cx="120" cy="330" r="5" fill="var(--tp-acc-ink)" opacity=".75" />
+                                    <circle cx="366" cy="352" r="3.6" fill="var(--tp-acc-ink)" opacity=".6" />
+                                    <circle cx="392" cy="120" r="4.2" fill="var(--tp-acc-ink)" opacity=".7" />
+                                </svg>
+                            </div>
+                            <span class="photo__overlay"></span>
+                        </div>
+                        <div class="hero__chip">
+                            <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"
+                                style="color:var(--tp-acc)">
+                                <path d="M12 3l2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.6 7 18.4l1.2-5.6L4 8.9l5.6-.6z" />
+                            </svg>
+                            <b>4.9</b>
+                            <span class="mono muted">1,284 sets</span>
+                        </div>
+                    </div>
+
+                    <div class="hero__headline">
+                        <div class="hero__eyebrow">
+                            <span class="hero__dot" aria-hidden="true"></span>
+                            <span class="mono">Now booking · Banani, Dhaka</span>
+                        </div>
+                        <h1 class="display">A fresh set.<br><em>A fresher mood.</em></h1>
+                        <p class="hero__sub">Chrome, jelly, french — built on your own nail, cured in forty minutes,
+                            booked in two taps.</p>
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="book.html">
+                                Book a set
+                                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                            <a class="btn btn--ghost" href="#menu">See the menu</a>
+                        </div>
+                        <div class="hero__meta">
+                            <div class="stars" aria-label="Rated 4.9 out of 5">
+                                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 3l2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.6 7 18.4l1.2-5.6L4 8.9l5.6-.6z" />
+                                </svg>
+                                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 3l2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.6 7 18.4l1.2-5.6L4 8.9l5.6-.6z" />
+                                </svg>
+                                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 3l2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.6 7 18.4l1.2-5.6L4 8.9l5.6-.6z" />
+                                </svg>
+                                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 3l2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.6 7 18.4l1.2-5.6L4 8.9l5.6-.6z" />
+                                </svg>
+                                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 3l2.4 5.3 5.6.6-4.2 3.9 1.2 5.6L12 15.6 7 18.4l1.2-5.6L4 8.9l5.6-.6z" />
+                                </svg>
+                            </div>
+                            <span class="mono muted">Same-week slots · No deposit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ticker" aria-hidden="true">
+                    <div class="ticker__rail">
+                        <span class="pill pill--line">Chrome</span>
+                        <span class="pill pill--line">Jelly</span>
+                        <span class="pill pill--line">French</span>
+                        <span class="pill pill--line">Aura cat-eye</span>
+                        <span class="pill pill--line">Builder gel</span>
+                        <span class="pill pill--line">Micro french</span>
+                        <span class="pill pill--line">Chrome powder</span>
+                        <span class="pill pill--line">Glazed donut</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ proof strip ============ -->
+        <section class="proof">
+            <div class="shell">
+                <div class="proof__inner">
+                    <div class="proof__item">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z" />
+                            <circle cx="12" cy="10" r="2.6" />
+                        </svg>
+                        Banani studio, 2 min from Road 11
+                    </div>
+                    <div class="proof__item">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="9" cy="8" r="3.2" />
+                            <path d="M3.5 20a5.5 5.5 0 0111 0" />
+                            <circle cx="17" cy="9.5" r="2.6" />
+                            <path d="M15 20a4.6 4.6 0 016.5-3.9" />
+                        </svg>
+                        Two artists, one chair each
+                    </div>
+                    <div class="proof__item">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="8.5" />
+                            <path d="M12 7.5V12l3 2" />
+                        </svg>
+                        Average set: 48 minutes
+                    </div>
+                    <div class="proof__item">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 12.5l5 5L20 6.5" />
+                        </svg>
+                        Walk-ins until 6pm
+                    </div>
+                </div>
+            </div>
+        </section><!-- ============ bento / menu ============ -->
+        <section class="section" id="menu">
+            <div class="shell">
+                <div class="section-head" data-reveal="theme" data-reveal-index="0">
+                    <span class="mono">01 — The menu</span>
+                    <h2 class="display display--sm">Four sets. Zero guesswork.</h2>
+                    <p>Each set is a fixed recipe: prep, shape, colour, cure, oil. You pick the finish, we pick the
+                        drill bits.</p>
+                </div>
+
+                <div class="bento">
+                    <article class="bento__cell bento__cell--art bento__hero" data-reveal="theme" data-reveal-index="1">
+                        <div class="photo">
+                            <div class="nailart">
+                                <svg viewBox="0 0 520 360" role="img" aria-label="Jelly gloss nails with chrome powder">
+                                    <defs>
+                                        <linearGradient id="jelly2" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0" stop-color="var(--tp-acc)" />
+                                            <stop offset="1" stop-color="var(--tp-acc-2)" />
+                                        </linearGradient>
+                                        <clipPath id="nailC">
+                                            <rect x="-30" y="0" width="60" height="150" rx="30" />
+                                        </clipPath>
+                                    </defs>
+                                    <ellipse cx="260" cy="300" rx="210" ry="46" fill="var(--tp-surf)" opacity=".5" />
+                                    <g transform="translate(120 96) rotate(-14)">
+                                        <g clip-path="url(#nailC)">
+                                            <rect x="-30" y="0" width="60" height="150" rx="30" fill="url(#jelly2)" />
+                                        </g>
+                                        <ellipse cx="-11" cy="74" rx="5" ry="20" fill="var(--tp-acc-ink)"
+                                            opacity=".4" />
+                                    </g>
+                                    <g transform="translate(196 78) rotate(-6)">
+                                        <g clip-path="url(#nailC)">
+                                            <rect x="-30" y="0" width="60" height="150" rx="30" fill="url(#jelly2)" />
+                                        </g>
+                                        <ellipse cx="-11" cy="74" rx="5" ry="20" fill="var(--tp-acc-ink)"
+                                            opacity=".4" />
+                                    </g>
+                                    <g transform="translate(272 74)">
+                                        <g clip-path="url(#nailC)">
+                                            <rect x="-30" y="0" width="60" height="150" rx="30" fill="url(#jelly2)" />
+                                        </g>
+                                        <ellipse cx="-11" cy="74" rx="5" ry="20" fill="var(--tp-acc-ink)"
+                                            opacity=".45" />
+                                        <circle cx="12" cy="22" r="3" fill="var(--tp-acc-ink)" opacity=".8" />
+                                    </g>
+                                    <g transform="translate(348 82) rotate(7)">
+                                        <g clip-path="url(#nailC)">
+                                            <rect x="-30" y="0" width="60" height="150" rx="30" fill="url(#jelly2)" />
+                                        </g>
+                                        <ellipse cx="-11" cy="74" rx="5" ry="20" fill="var(--tp-acc-ink)"
+                                            opacity=".4" />
+                                    </g>
+                                    <g transform="translate(416 104) rotate(15)">
+                                        <g clip-path="url(#nailC)">
+                                            <rect x="-30" y="0" width="60" height="150" rx="30" fill="url(#jelly2)" />
+                                        </g>
+                                    </g>
+                                    <circle cx="88" cy="250" r="4.4" fill="var(--tp-acc-ink)" opacity=".7" />
+                                    <circle cx="452" cy="196" r="3.4" fill="var(--tp-acc-ink)" opacity=".6" />
+                                </svg>
+                            </div>
+                            <span class="photo__overlay"></span>
+                        </div>
+                        <div class="bento__caption">
+                            <span class="pill">Most booked</span>
+                            <h3
+                                style="margin-top:10px;font-family:var(--tp-font-display);font-size:clamp(26px,4vw,38px);line-height:1.04">
+                                Chrome french,<br>done in 48 minutes</h3>
+                        </div>
+                    </article>
+
+                    <article class="bento__cell" data-reveal="theme" data-reveal-index="2">
+                        <span class="mono muted">Sets this year</span>
+                        <div class="bento__num">1,284</div>
+                        <p>Roughly 26 a week, with a 4.9 average. Every set photographed before you leave.</p>
+                    </article>
+
+                    <article class="bento__cell bento__cell--acc" data-reveal="theme" data-reveal-index="3">
+                        <h3>No drills. No soak-off damage.</h3>
+                        <ul class="bento__list">
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Builder gel only</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> E-file free</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Removal always included</li>
+                        </ul>
+                    </article>
+
+                    <article class="bento__cell" data-reveal="theme" data-reveal-index="4">
+                        <span class="mono muted">Finish of the month</span>
+                        <h3>Jelly gloss</h3>
+                        <p>One sheer layer, one gloss layer, no top-coat clouding. Reads wet for two weeks.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ artists ============ -->
+        <section class="section--tight" id="artists">
+            <div class="shell">
+                <div class="section-head" data-reveal="theme" data-reveal-index="0">
+                    <span class="mono">02 — The hands</span>
+                    <h2 class="display display--sm">Two artists. Pick your person.</h2>
+                </div>
+                <div class="artists">
+                    <article class="artist" data-reveal="theme" data-reveal-index="1">
+                        <span class="avatar avatar--lg">SA</span>
+                        <div class="artist__body">
+                            <h3>Sadia A.</h3>
+                            <p>Chrome, micro french, structure gel. Books out fastest on Fridays.</p>
+                        </div>
+                        <div class="artist__side">
+                            <span class="mono">4.9 ★</span>
+                            <span class="step-note">Next: today</span>
+                        </div>
+                    </article>
+                    <article class="artist" data-reveal="theme" data-reveal-index="2">
+                        <span class="avatar avatar--lg">RN</span>
+                        <div class="artist__body">
+                            <h3>Rina N.</h3>
+                            <p>Jelly, aura cat-eye, hand-painted art. Best for short natural nails.</p>
+                        </div>
+                        <div class="artist__side">
+                            <span class="mono">4.8 ★</span>
+                            <span class="step-note">Next: tomorrow</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="row" style="margin-top:18px">
+                    <a class="btn btn--ghost" href="book.html">Pick a time</a>
+                </div>
+            </div>
+        </section><!-- ============ testimonial band ============ -->
+        <section class="band">
+            <div class="photo" aria-hidden="true">
+                <div class="nailart">
+                    <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" role="presentation">
+                        <defs>
+                            <linearGradient id="bandA" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="var(--tp-ink)" />
+                                <stop offset="1" stop-color="var(--tp-acc)" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="1200" height="420" fill="url(#bandA)" />
+                        <g opacity=".5">
+                            <ellipse cx="180" cy="330" rx="150" ry="90" fill="var(--tp-acc-2)" />
+                            <ellipse cx="1020" cy="120" rx="190" ry="110" fill="var(--tp-acc)" />
+                        </g>
+                        <g stroke="var(--tp-acc-ink)" stroke-width="1.5" opacity=".35" fill="none">
+                            <path d="M-40 380 C 220 300, 380 420, 640 340 S 980 240, 1260 320" />
+                            <path d="M-40 200 C 200 140, 420 260, 700 180 S 1020 100, 1260 190" />
+                        </g>
+                    </svg>
+                </div>
+                <span class="photo__overlay"></span>
+            </div>
+            <div class="shell">
+                <div class="band__inner">
+                    <div class="band__quote" data-reveal="theme" data-reveal-index="0">
+                        <blockquote>“First place that shaped my natural nail instead of burying it. Three weeks in,
+                            still glassy.”</blockquote>
+                        <div class="band__by">
+                            <span class="avatar">MR</span>
+                            <div class="band__who">
+                                Mahira R.
+                                <span>Chrome french · returning regular</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="band__aside" data-reveal="theme" data-reveal-index="1">
+                        <span class="mono">4.9 / 5 · 312 reviews</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ pricing ============ -->
+        <section class="section" id="sets">
+            <div class="shell">
+                <div class="section-head" data-reveal="theme" data-reveal-index="0">
+                    <span class="mono">03 — The sets</span>
+                    <h2 class="display display--sm">Fixed price. Fixed time.</h2>
+                    <p>No add-on maths at the desk. Everything below includes prep, shape, colour, cure and oil.</p>
+                </div>
+
+                <div class="pricing">
+                    <article class="tier" data-reveal="theme" data-reveal-index="1">
+                        <h3 class="tier__name">Petite</h3>
+                        <p class="tier__desc">A colour change on short natural nails.</p>
+                        <div class="tier__price"><b>৳1,200</b><span>45 min</span></div>
+                        <ul class="tier__includes">
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> One solid colour or micro french</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Cuticle work + buffing</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Removal included</li>
+                        </ul>
+                        <a class="btn btn--ghost btn--block" href="book.html?set=petite">Book a set</a>
+                    </article>
+
+                    <article class="tier tier--pick" data-reveal="theme" data-reveal-index="2">
+                        <span class="tier__flag">Most booked</span>
+                        <h3 class="tier__name">Standard</h3>
+                        <p class="tier__desc">The set everyone comes back for.</p>
+                        <div class="tier__price"><b>৳1,800</b><span>50 min</span></div>
+                        <ul class="tier__includes">
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Chrome french or jelly gloss</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Builder gel structure</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Any shape, medium length</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Free 7-day touch-up</li>
+                        </ul>
+                        <a class="btn btn--primary btn--block" href="book.html?set=standard">Book a set</a>
+                    </article>
+
+                    <article class="tier" data-reveal="theme" data-reveal-index="3">
+                        <h3 class="tier__name">Statement</h3>
+                        <p class="tier__desc">Art, aura, cat-eye — the loud one.</p>
+                        <div class="tier__price"><b>৳2,600</b><span>80 min</span></div>
+                        <ul class="tier__includes">
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Aura cat-eye + hand-painted art</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Long length, any shape</li>
+                            <li><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 12.5l5 5L20 6.5" />
+                                </svg> Photo set for your grid</li>
+                        </ul>
+                        <a class="btn btn--ghost btn--block" href="book.html?set=statement">Book a set</a>
+                    </article>
+                </div>
+                <p class="step-note" style="margin-top:16px">Prices in BDT · Cash, bKash or card at the studio · No
+                    deposit online</p>
+            </div>
+        </section>
+
+        <!-- ============ faq ============ -->
+        <section class="section--tight">
+            <div class="shell">
+                <div class="section-head" data-reveal="theme" data-reveal-index="0">
+                    <span class="mono">04 — Straight answers</span>
+                    <h2 class="display display--sm">The three things you always ask.</h2>
+                </div>
+                <div class="faq">
+                    <details class="faq__item" open data-reveal="theme" data-reveal-index="1">
+                        <summary class="faq__q">
+                            Will this wreck my natural nail?
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                        </summary>
+                        <p class="faq__a">No. We work in builder gel only — no drills, no e-file, no soak-off acetone
+                            bath unless you ask for it. Growth is removed with a hand file at the next appointment, so
+                            the plate underneath stays intact.</p>
+                    </details>
+                    <details class="faq__item" data-reveal="theme" data-reveal-index="2">
+                        <summary class="faq__q">
+                            Do I pay a deposit to book?
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                        </summary>
+                        <p class="faq__a">Nothing online, nothing due now. You pay at the studio once the set is done —
+                            cash, bKash or card. Cancel free up to 12 hours before; after that we ask for ৳300 to hold
+                            the chair.</p>
+                    </details>
+                    <details class="faq__item" data-reveal="theme" data-reveal-index="3">
+                        <summary class="faq__q">
+                            How long does a set actually last?
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                        </summary>
+                        <p class="faq__a">Three to four weeks for Standard and Statement, two to three for Petite. If
+                            anything lifts inside seven days, come back and we fix it free — that's the whole point of
+                            booking the same artist twice.</p>
+                    </details>
+                </div>
+            </div>
+        </section><!-- ============ closing CTA ============ -->
+        <section class="section--tight">
+            <div class="shell">
+                <div class="closing" data-reveal="theme" data-reveal-index="0">
+                    <div class="photo" aria-hidden="true">
+                        <div class="nailart">
+                            <svg viewBox="0 0 900 400" preserveAspectRatio="xMidYMid slice" role="presentation">
+                                <defs>
+                                    <linearGradient id="closingA" x1="0" y1="1" x2="1" y2="0">
+                                        <stop offset="0" stop-color="var(--tp-ink)" />
+                                        <stop offset="1" stop-color="var(--tp-acc)" />
+                                    </linearGradient>
+                                    <clipPath id="nailD">
+                                        <rect x="-26" y="0" width="52" height="132" rx="26" />
+                                    </clipPath>
+                                </defs>
+                                <rect width="900" height="400" fill="url(#closingA)" />
+                                <g opacity=".9">
+                                    <g transform="translate(660 130) rotate(-10)">
+                                        <g clip-path="url(#nailD)">
+                                            <rect x="-26" y="0" width="52" height="132" rx="26"
+                                                fill="var(--tp-acc-2)" />
+                                        </g>
+                                    </g>
+                                    <g transform="translate(726 148) rotate(4)">
+                                        <g clip-path="url(#nailD)">
+                                            <rect x="-26" y="0" width="52" height="132" rx="26"
+                                                fill="var(--tp-surf-2)" />
+                                        </g>
+                                    </g>
+                                    <g transform="translate(792 178) rotate(16)">
+                                        <g clip-path="url(#nailD)">
+                                            <rect x="-26" y="0" width="52" height="132" rx="26" fill="var(--tp-acc)" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <circle cx="600" cy="320" r="4" fill="var(--tp-acc-ink)" opacity=".6" />
+                                <circle cx="860" cy="90" r="3" fill="var(--tp-acc-ink)" opacity=".5" />
+                            </svg>
+                        </div>
+                        <span class="photo__overlay"></span>
+                    </div>
+                    <div class="closing__inner">
+                        <span class="mono" style="color:var(--tp-acc-2)">05 — Come through</span>
+                        <h2 class="display">A fresh set.<br><em style="font-style:italic;color:var(--tp-acc-2)">A
+                                fresher mood.</em></h2>
+                        <p>Chrome, jelly, french — built on your own nail, cured in forty minutes, booked in two taps.
+                        </p>
+                        <div class="closing__actions">
+                            <a class="btn btn--primary" href="book.html">Book a set</a>
+                            <a class="btn btn--ghost" href="https://wa.me/8801700000000">Message the studio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ footer ============ -->
+        <footer class="foot" id="studio">
+            <div class="shell">
+                <div class="foot__inner">
+                    <span>© 2026 NAIL BAR · Road 11, Banani, Dhaka · Open 10am–8pm, closed Monday</span>
+                    <div class="row">
+                        <a href="book.html">Book</a>
+                        <a href="https://instagram.com">Instagram</a>
+                        <a href="https://wa.me/8801700000000">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- sticky mobile CTA -->
+        <div class="sticky-cta">
+            <div class="sticky-cta__inner">
+                <div class="sticky-cta__meta">
+                    From
+                    <b>৳1,200</b>
+                </div>
+                <a class="btn btn--primary" href="book.html">Book a set</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/site.js"></script>
+</body>
+
+</html>

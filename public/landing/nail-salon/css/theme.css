@@ -1,0 +1,679 @@
+/* NAIL BAR — Design Studio theme `nail-salon`
+   Every component styles itself with var(--tp-*) only. Never a raw hex, font name,
+   px radius, duration or shadow outside this file. */
+
+@keyframes tp-pop {
+    0% {
+        transform: scale(.88);
+        opacity: 0
+    }
+
+    62% {
+        transform: scale(1.05)
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes tp-up {
+    from {
+        transform: translateY(var(--tp-reveal-dist, 16px));
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes tp-down {
+    from {
+        transform: translateY(-16px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes tp-sheet {
+    from {
+        transform: translateY(102%)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes tp-fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes tp-wipe {
+    from {
+        clip-path: inset(0 100% 0 0)
+    }
+
+    to {
+        clip-path: inset(0 0 0 0)
+    }
+}
+
+@keyframes tp-curtain {
+    from {
+        clip-path: inset(100% 0 0 0);
+        transform: translateY(var(--tp-reveal-dist, 16px))
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes tp-rise {
+    from {
+        clip-path: inset(0 0 100% 0);
+        transform: translateY(var(--tp-reveal-dist, 16px))
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes tp-blur-in {
+    from {
+        opacity: 0;
+        filter: blur(16px);
+        transform: scale(1.05) translateY(var(--tp-reveal-dist, 16px))
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1) translateY(0)
+    }
+}
+
+@keyframes tp-glitch {
+    0% {
+        opacity: 0;
+        transform: translate3d(-6px, 0, 0)
+    }
+
+    18% {
+        opacity: 1;
+        transform: translate3d(5px, 0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes tp-tape {
+    from {
+        opacity: 0;
+        transform: rotate(-9deg) translateY(var(--tp-reveal-dist, 16px)) scale(.95)
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(var(--tp-img-tilt, 0deg)) translateY(0) scale(1)
+    }
+}
+
+@keyframes tp-zoom {
+    from {
+        transform: scale(1.16)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes tp-bar {
+    from {
+        transform: scaleX(0)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+@keyframes tp-shake {
+
+    10%,
+    90% {
+        transform: translateX(-2px)
+    }
+
+    30%,
+    70% {
+        transform: translateX(3px)
+    }
+
+    50% {
+        transform: translateX(-4px)
+    }
+}
+
+@keyframes tp-pulse {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .42
+    }
+}
+
+@keyframes tp-breathe {
+
+    0%,
+    100% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.045)
+    }
+}
+
+@keyframes tp-shimmer {
+    from {
+        background-position: -160% 0
+    }
+
+    to {
+        background-position: 260% 0
+    }
+}
+
+@keyframes tp-float {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-9px)
+    }
+}
+
+@keyframes tp-spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes tp-blink {
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes tp-tilt {
+
+    0%,
+    100% {
+        transform: rotate(-2.5deg)
+    }
+
+    50% {
+        transform: rotate(2.5deg)
+    }
+}
+
+@keyframes tp-drift {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1)
+    }
+
+    50% {
+        transform: translate3d(4%, -3%, 0) scale(1.12)
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1)
+    }
+}
+
+@keyframes fx-scroll {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 0 160px
+    }
+}
+
+@keyframes fx-foil {
+    from {
+        background-position: 0% 50%
+    }
+
+    to {
+        background-position: 200% 50%
+    }
+}
+
+@keyframes fx-blob {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0)
+    }
+
+    33% {
+        transform: translate(8%, -6%) scale(1.15) rotate(40deg)
+    }
+
+    66% {
+        transform: translate(-6%, 8%) scale(.92) rotate(-30deg)
+    }
+
+    100% {
+        transform: none
+    }
+}
+
+@keyframes fx-hue {
+    to {
+        filter: hue-rotate(360deg)
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important
+    }
+}
+
+.tp-web-stage {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    animation: var(--tp-3d-web, none);
+    transform-origin: 50% 50%
+}
+
+.tp-web-stage>.tp-fx {
+    inset: -20%
+}
+
+.tp-fx {
+    position: absolute;
+    inset: -40%;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--tp-fx);
+    background-size: var(--tp-fx-size);
+    opacity: var(--tp-fx-op);
+    mix-blend-mode: var(--tp-fx-blend);
+    transform: var(--tp-fx-tf);
+    animation: var(--tp-fx-anim)
+}
+
+.tp-screen {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden
+}
+
+.tp-stage {
+    transform: var(--tp-3d);
+    animation: var(--tp-3d-anim);
+    transform-style: preserve-3d
+}
+
+.tp-stage>.tp-fx {
+    inset: -40%
+}
+
+[data-theme="nail-salon"] {
+    --tp-h: 345;
+    --tp-fx: none;
+    --tp-fx-size: auto;
+    --tp-fx-anim: none;
+    --tp-fx-op: 0;
+    --tp-fx-blend: normal;
+    --tp-fx-tf: none;
+    --tp-3d: none;
+    --tp-3d-anim: none;
+    --tp-3d-web: none;
+    --tp-dur-slow: 520ms;
+    --tp-stagger: 65ms;
+    --tp-reveal: tp-pop;
+    --tp-reveal-dist: 20px;
+    --tp-img-r: 30px 30px 30px 8px;
+    --tp-img-frame: none;
+    --tp-img-sh: none;
+    --tp-img-filter: saturate(1.25) brightness(1.03);
+    --tp-img-overlay-op: 0.08;
+    --tp-img-blend: normal;
+    --tp-img-tilt: 0deg;
+    --tp-img-ar: 1 / 1;
+    --tp-bg: #fff2f6;
+    --tp-canvas: #fff2f6;
+    --tp-surf: #ffffff;
+    --tp-surf-2: oklch(0.92 0.06 calc(var(--tp-h) + 0));
+    --tp-ink: #351424;
+    --tp-mute: #8a5a70;
+    --tp-acc: oklch(0.66 0.22 calc(var(--tp-h) + 0));
+    --tp-acc-2: oklch(0.82 0.14 calc(var(--tp-h) + -160));
+    --tp-acc-ink: #ffffff;
+    --tp-line: #f3d3e0;
+    --tp-grad: linear-gradient(135deg, oklch(0.66 0.22 calc(var(--tp-h) + 0)), oklch(0.82 0.14 calc(var(--tp-h) + -160)));
+    --tp-r: 30px 30px 30px 8px;
+    --tp-r-sm: 14px;
+    --tp-r-lg: 40px 40px 40px 10px;
+    --tp-r-btn: 99px;
+    --tp-sh: 0 14px 32px rgba(0, 0, 0, .14);
+    --tp-sh-sm: 0 5px 12px rgba(0, 0, 0, .1);
+    --tp-bw: 1.5px;
+    --tp-font-display: 'DM Serif Display', serif;
+    --tp-font-body: 'Plus Jakarta Sans', system-ui;
+    --tp-font-mono: 'JetBrains Mono', monospace;
+    --tp-w-display: 400;
+    --tp-track-display: 0em;
+    --tp-case-display: none;
+    --tp-hero: 68px;
+    --tp-dur: 180ms;
+    --tp-ease: cubic-bezier(.34, 1.7, .64, 1);
+    --tp-press: 0.93;
+    --tp-tex: none;
+    --tp-blur: none;
+
+    /* derived tokens — compositions of the set above, still no raw values */
+    --tp-plate: var(--tp-ink);
+    --tp-plate-ink: var(--tp-acc-ink);
+    --tp-acc-soft: var(--tp-surf-2);
+    --tp-grad-2: linear-gradient(160deg, oklch(0.92 0.06 calc(var(--tp-h) + 0)), oklch(0.95 0.03 calc(var(--tp-h) + -160)));
+    --tp-hero-sm: calc(var(--tp-hero) * .56);
+    --tp-hero-xs: calc(var(--tp-hero) * .4);
+    --tp-space: 22px;
+    --tp-shell: 1180px;
+    --tp-tap: 46px;
+}
+
+/* ---------- base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html {
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    background: var(--tp-bg);
+    color: var(--tp-ink);
+    font-family: var(--tp-font-body);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote {
+    margin: 0
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+::selection {
+    background: var(--tp-acc);
+    color: var(--tp-acc-ink)
+}
+
+:focus-visible {
+    outline: 2.5px solid var(--tp-acc);
+    outline-offset: 3px;
+    border-radius: var(--tp-r-sm)
+}
+
+/* ---------- type ---------- */
+.display {
+    font-family: var(--tp-font-display);
+    font-weight: var(--tp-w-display);
+    letter-spacing: var(--tp-track-display);
+    text-transform: var(--tp-case-display);
+    line-height: .94;
+    font-size: clamp(38px, 7.4vw, var(--tp-hero));
+}
+
+.display--sm {
+    font-size: clamp(28px, 4.6vw, calc(var(--tp-hero) * .62));
+    line-height: 1.02
+}
+
+.mono {
+    font-family: var(--tp-font-mono);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.lede {
+    font-size: 16px;
+    color: var(--tp-mute);
+    max-width: 46ch
+}
+
+.muted {
+    color: var(--tp-mute)
+}
+
+/* ---------- icons ---------- */
+.icon {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.icon--sm {
+    width: 16px;
+    height: 16px
+}
+
+.icon--lg {
+    width: 26px;
+    height: 26px
+}
+
+/* ---------- buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: var(--tp-tap);
+    padding: 0 26px;
+    border-radius: var(--tp-r-btn);
+    font-weight: 800;
+    font-size: 15px;
+    transition: transform var(--tp-dur) var(--tp-ease), box-shadow var(--tp-dur) var(--tp-ease), background var(--tp-dur) linear;
+    will-change: transform;
+}
+
+.btn:active {
+    transform: scale(var(--tp-press))
+}
+
+.btn--primary {
+    background: var(--tp-acc);
+    color: var(--tp-acc-ink);
+    box-shadow: var(--tp-sh-sm)
+}
+
+.btn--primary:hover {
+    box-shadow: var(--tp-sh)
+}
+
+.btn--ghost {
+    background: var(--tp-surf);
+    color: var(--tp-ink);
+    border: var(--tp-bw) solid var(--tp-line)
+}
+
+.btn--ghost:hover {
+    border-color: var(--tp-acc)
+}
+
+.btn--plate {
+    background: var(--tp-plate);
+    color: var(--tp-plate-ink)
+}
+
+.btn--block {
+    display: flex;
+    width: 100%
+}
+
+.btn--sm {
+    min-height: 38px;
+    padding: 0 16px;
+    font-size: 13px
+}
+
+/* ---------- surfaces ---------- */
+.card {
+    background: var(--tp-surf);
+    border: var(--tp-bw) solid var(--tp-line);
+    border-radius: var(--tp-r);
+    box-shadow: var(--tp-sh-sm);
+}
+
+.plate {
+    background: var(--tp-surf);
+    border: var(--tp-bw) solid var(--tp-line);
+    border-radius: var(--tp-r);
+    padding: var(--tp-space);
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: var(--tp-r-btn);
+    background: var(--tp-surf-2);
+    color: var(--tp-ink);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pill--acc {
+    background: var(--tp-acc);
+    color: var(--tp-acc-ink)
+}
+
+.pill--line {
+    background: transparent;
+    border: var(--tp-bw) solid var(--tp-line)
+}
+
+/* ---------- imagery treatment (every photo) ---------- */
+.photo {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: var(--tp-img-ar);
+    border-radius: var(--tp-img-r);
+    border: var(--tp-img-frame);
+    box-shadow: var(--tp-img-sh);
+    filter: var(--tp-img-filter);
+    transform: rotate(var(--tp-img-tilt));
+    background: var(--tp-grad);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.photo__overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: var(--tp-grad);
+    opacity: var(--tp-img-overlay-op);
+    mix-blend-mode: var(--tp-img-blend);
+}
+
+.photo--wide {
+    aspect-ratio: var(--tp-img-wide, 16 / 10)
+}
+
+.photo--tall {
+    aspect-ratio: var(--tp-img-tall, 3 / 4)
+}
+
+/* ---------- reveal ---------- */
+[data-reveal] {
+    will-change: transform, opacity
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nail-salon" style="--tp-h: 345">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book a set — NAIL BAR</title>
+    <meta name="description"
+        content="Book a chrome, jelly or french nail set at NAIL BAR, Banani. No deposit, pay at the studio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/book.css">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ff2f8e'/%3E%3Crect x='11' y='6' width='10' height='20' rx='5' fill='%23fff2f6'/%3E%3C/svg%3E">
+</head>
+
+<body>
+
+    <div class="tp-stage">
+        <div class="tp-screen">
+            <div class="tp-fx" aria-hidden="true"></div>
+
+            <div class="app">
+                <header class="appbar">
+                    <div class="shell">
+                        <div class="appbar__inner">
+                            <button type="button" class="appbar__back" id="appbarBack" aria-label="Back to the bar">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19 12H5M11 6l-6 6 6 6" />
+                                </svg>
+                            </button>
+                            <div class="appbar__step">
+                                <div class="appbar__title" id="barTitle">The set</div>
+                                <span class="step-note" id="barStep">01 / 05</span>
+                            </div>
+                            <a class="pill pill--line" href="index.html" style="margin-left:auto">NAIL&nbsp;BAR</a>
+                        </div>
+                        <div class="progress">
+                            <div class="progress__fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </header>
+
+                <main class="shell">
+                    <div id="stepHost"></div>
+                    <p class="field__error" id="hintOut" role="status" aria-live="polite" style="padding-top:10px"></p>
+                    <div class="legend" style="padding:18px 0 8px">
+                        <span>
+                            <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z" />
+                                <circle cx="12" cy="10" r="2.6" />
+                            </svg>
+                            Road 11, Banani, Dhaka
+                        </span>
+                        <span>Open 10am–8pm · Closed Monday</span>
+                    </div>
+                </main>
+
+                <div class="actions" id="actions">
+                    <div class="actions__inner">
+                        <div class="actions__total">
+                            Pay at studio
+                            <b id="totalOut">৳0</b>
+                        </div>
+                        <button type="button" class="btn btn--primary" id="nextBtn">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/booking/main.js"></script>
+</body>
+
+</html>

@@ -229,3 +229,194 @@ button[class*="text-[#f15a24]"]:not([class*="bg-"]):hover,
     will-change: transform, opacity;
 }
 
+/* Storefront refresh: warm editorial surfaces with the existing dynamic brand accent. */
+.storefront-shell {
+    --store-ink: #18352f;
+    --store-muted: #68756f;
+    --store-line: #e8ebe5;
+    --store-paper: #f7f7f2;
+    color: var(--store-ink);
+    background: var(--store-paper);
+}
+
+.storefront-shell a,
+.storefront-shell button,
+.storefront-shell input,
+.storefront-shell select,
+.storefront-shell textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.storefront-announcement {
+    background: #18352f !important;
+    border-color: #28463e !important;
+    color: #e8eee8 !important;
+}
+
+.storefront-announcement a,
+.storefront-announcement span {
+    color: inherit;
+}
+
+.storefront-header {
+    background: rgba(255, 255, 252, 0.98) !important;
+    border-color: var(--store-line) !important;
+}
+
+.storefront-header > div > div {
+    min-height: 76px;
+}
+
+.storefront-header form > div {
+    border-color: #e2e7df !important;
+    background: #f6f7f3 !important;
+    box-shadow: none !important;
+}
+
+.storefront-header form:focus-within > div {
+    border-color: var(--brand-primary) !important;
+    background: #fff !important;
+}
+
+.storefront-header nav a,
+.storefront-header button,
+.storefront-navigation a {
+    transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.storefront-navigation {
+    background: #fff !important;
+    border-color: var(--store-line) !important;
+}
+
+.storefront-navigation > div {
+    min-height: 50px;
+}
+
+.storefront-navigation a {
+    letter-spacing: 0.045em;
+}
+
+.storefront-main {
+    background: var(--store-paper) !important;
+    color: var(--store-ink);
+}
+
+.storefront-main > section {
+    max-width: 1320px;
+}
+
+.storefront-main > section h2 {
+    color: var(--store-ink);
+    letter-spacing: -0.035em;
+}
+
+.storefront-main > section:first-child {
+    padding-top: 28px;
+}
+
+.storefront-main > section:first-child > div > div:first-child {
+    gap: 18px;
+}
+
+.storefront-main > section:first-child [class*="rounded-2xl"] {
+    border-radius: 22px;
+}
+
+.storefront-main .product-card {
+    overflow: hidden;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.storefront-main .product-card:hover {
+    transform: translateY(-4px);
+}
+
+.storefront-main .product-card img {
+    transition: transform 360ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.storefront-main .product-card:hover img {
+    transform: scale(1.035);
+}
+
+.storefront-main input:not([type="checkbox"]):not([type="radio"]),
+.storefront-main select,
+.storefront-main textarea {
+    border-color: #dfe5dc;
+}
+
+.storefront-main input:focus,
+.storefront-main select:focus,
+.storefront-main textarea:focus {
+    --tw-ring-color: color-mix(in srgb, var(--brand-primary) 24%, transparent);
+}
+
+.storefront-footer {
+    background: var(--store-paper) !important;
+}
+
+.storefront-footer > div > div {
+    background: #18352f !important;
+    border-color: #28463e !important;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(24, 53, 47, 0.12) !important;
+}
+
+.storefront-footer > div > div,
+.storefront-footer > div > div h4,
+.storefront-footer > div > div p,
+.storefront-footer > div > div li,
+.storefront-footer > div > div a:not([class*="bg-"]) {
+    color: #e4ece5 !important;
+}
+
+.storefront-footer > div > div a:hover {
+    color: #fff !important;
+}
+
+.storefront-footer > div > div [class*="border-t"] {
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.storefront-mobile-nav {
+    background: rgba(24, 53, 47, 0.97) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 -8px 28px rgba(19, 39, 34, 0.16) !important;
+    backdrop-filter: blur(16px);
+}
+
+@media (max-width: 767px) {
+    .storefront-header > div > div {
+        min-height: 64px;
+    }
+
+    .storefront-main > section:first-child {
+        padding-top: 16px;
+    }
+
+    .storefront-main > section:first-child [class*="rounded-2xl"] {
+        border-radius: 16px;
+    }
+
+    .storefront-main .product-card:hover {
+        transform: none;
+    }
+
+    .storefront-footer > div > div {
+        border-radius: 20px;
+        padding: 28px 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .storefront-shell *,
+    .storefront-shell *::before,
+    .storefront-shell *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

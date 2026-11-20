@@ -133,7 +133,7 @@ export default function StorefrontLayout({ children, title, description, activeC
   };
 
   return (
-    <>
+    <div className="storefront-shell">
       {title ? (
         <Head title={title}>
           {description && <meta name="description" content={description} />}
@@ -145,7 +145,7 @@ export default function StorefrontLayout({ children, title, description, activeC
       ) : null}
 
       {/* Top bar */}
-      <div className="hidden md:block bg-[#f1f3f5] text-gray-600 text-xs border-b border-gray-200">
+      <div className="storefront-announcement hidden md:block bg-[#f1f3f5] text-gray-600 text-xs border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-end h-9 gap-4">
           {promoText && (
             promoLink
@@ -270,7 +270,7 @@ export default function StorefrontLayout({ children, title, description, activeC
       </div>
 
       {/* Main header (in normal flow at top of page) */}
-      <header className="bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 relative z-40">
+      <header className="storefront-header bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 relative z-40">
         <div className="mx-auto max-w-7xl">
           <div className="flex h-16 md:h-20 items-center gap-4 md:gap-6 lg:gap-10">
             
@@ -425,7 +425,7 @@ export default function StorefrontLayout({ children, title, description, activeC
 
       {/* Template 1: Modern Tabbed Category Dropdown & Navigation Bar (Clean White) */}
       {headerTemplate !== 'classic_dark' && (
-        <nav className="hidden lg:block bg-white border-b border-gray-200/80 relative z-30">
+        <nav className="storefront-navigation hidden lg:block bg-white border-b border-gray-200/80 relative z-30">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[44px]">
             <div className="flex items-center">
               {/* Category Dropdown Button */}
@@ -606,12 +606,12 @@ export default function StorefrontLayout({ children, title, description, activeC
       )}
 
       {/* Main content - pad bottom on mobile for sticky nav */}
-      <main className="bg-[#f8f9fa] min-h-screen pb-[70px] md:pb-0">
+      <main className="storefront-main bg-[#f8f9fa] min-h-screen pb-[70px] md:pb-0">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="bg-transparent pb-8 pt-4 mb-[60px] md:mb-0">
+      <footer className="storefront-footer bg-transparent pb-8 pt-4 mb-[60px] md:mb-0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm px-6 sm:px-10 py-12 lg:py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -668,7 +668,7 @@ export default function StorefrontLayout({ children, title, description, activeC
 
       {/* Sticky Bottom Mobile Menu */}
       {!hideMobileBottomMenu && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#f15a24] text-white flex justify-around items-center h-[60px] z-[45] shadow-[0_-4px_10px_rgba(0,0,0,0.1)] pb-safe">
+        <div className="storefront-mobile-nav md:hidden fixed bottom-0 left-0 right-0 bg-[#f15a24] text-white flex justify-around items-center h-[60px] z-[45] shadow-[0_-4px_10px_rgba(0,0,0,0.1)] pb-safe">
           <a href="/" className="flex flex-col items-center justify-center w-full h-full text-white/90 hover:text-white hover:bg-black/10 transition-colors">
             <svg className="h-5 w-5 mb-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
             <span className="text-[9px] font-bold tracking-wide">Home</span>
@@ -796,6 +796,6 @@ export default function StorefrontLayout({ children, title, description, activeC
 
       {/* ── Marketing & Notice Visitor Popup ── */}
       <VisitorPopupModal popup={popup} />
-    </>
+    </div>
   );
 }
